@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.grid {
+  min-height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #fafafa;
+  grid-template-rows: 40vh 10vh max-content;
+  margin-bottom: 2rem;
+}
+
+.main {
+  grid-row: 1 / 3;
+  grid-column: 1;
+  background-color: red;
+  background: url(/images/image-hero-desktop.jpg) center;
+  background-size: cover;
+}
+
+.info {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  grid-column: 1;
+  background-color: #fafafa;
+  grid-row: 2/-1;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 80%;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.card {
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+  position: relative;
+  border-radius: 0.4rem;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #888888;
+  line-height: 1.5;
+}
+
+.card .actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.button {
+  font-weight: bold;
+  background-color: #3cb4ab;
+  color: white;
+  padding: 1rem;
+  border-radius: 100vmax;
+}
+
+.card .logo {
+  position: absolute;
+  top: 0;
+  transform: translateY(-30px);
+}
+
+.found-info {
+  margin: 1rem 0;
+}
+
+.line {
+  background-color: #3cb4ab;
+  height: 0.1rem;
+  width: 30%;
+}
+
+.card.about {
+  text-align: left;
+  border: 1px solid #3cb4ab;
+  align-items: flex-start;
+}
+
+.foundation {
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  border: 2px solid #3cb4ab;
+  padding: 1rem;
+}
+
+.foundation.disable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.foundation .title,
+.foundation .left-info {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: 650px) {
+}
+@media (min-width: 1000px) {
+  .info {
+    width: 60%;
+  }
+  .card {
+    gap: 2rem;
+  }
+}
+
+.space {
+  height: 50px;
+  width: 100%;
+}
+
+.card.found-flex {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.found-flex > * {
+  flex: 10em;
+}
